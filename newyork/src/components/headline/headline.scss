@@ -1,0 +1,32 @@
+@mixin fontStandard {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+@mixin headlineFont{
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    transition: ease-in;
+    transition-duration: 1000ms;
+}
+
+.headline-news{
+    padding: 0% 7%;
+    display: flex;
+    .news-content{
+        h1{
+            @include headlineFont();
+        }
+        p{
+            @include fontStandard();
+        }
+    }
+    .news-image{
+       img{
+        max-width: 800px;
+        max-height: 800px;
+       }
+    }
+   
+}
+
